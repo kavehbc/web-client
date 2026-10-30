@@ -1,4 +1,4 @@
-# web-client (Title)
+# web-client
 ## Header 1
 ### Header 2
 #### Header 3
