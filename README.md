@@ -82,3 +82,5 @@ $$
 &= -\nabla p + \mu \left( \frac{\partial^2 \mathbf{u}}{\partial x^2} + \frac{\partial^2 \mathbf{u}}{\partial y^2} + \frac{\partial^2 \mathbf{u}}{\partial z^2} \right) + \rho \mathbf{g}
 \end{aligned}
 $$
+
+If I want to write a formula like $\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right)$ within a sentence.
