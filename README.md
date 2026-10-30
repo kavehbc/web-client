@@ -84,3 +84,16 @@ $$
 $$
 
 If I want to write a formula like $\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right)$ within a sentence.
+
+$$
+\mathbf{\dot{x}}(t) = 
+\begin{bmatrix} 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+-k_p & -k_d & -\alpha 
+\end{bmatrix} \mathbf{x}(t) + 
+\begin{cases} 
+\mathbf{B}_1 u(t), & \text{if } t \le t_0 \\ 
+\mathbf{B}_2 u(t) + \mathbf{w}(t), & \text{if } t > t_0 
+\end{cases}
+$$
