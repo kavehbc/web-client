@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Form</title>
+</head>
+<body>
+
+<center>
+<h1>Sample Form</h1>
+
+My Email: <a href="mailto:myname@business.com">myname@business.com</a>
+<br />
+Tel: <a href="tel:5141234567">(514) 123 - 4567</a>
+<br />
+Website: <a href="http://www.kaveh.ai" target="_blank">kaveh.ai</a>
+<br />
+
+</center>
+
+<form action="send.php?q=123&another=abcd" method="POST">
+
+<input type="hidden" name="something" value="ABC">
+
+<table align="center" border="0">
+<tr><td>
+	<label for="username">Username:</label>
+</td><td>
+<input type="text" name="username"
+		placeholder="Enter your username"
+		value="test" title="Alternative data"
+		required=True disabled=True />
+</td></tr>
+<tr><td>
+	<label for="password">Password:</label>
+</td><td>
+	<input type="password" name="password"
+			placeholder="Enter your password"
+			title="Alternative data" />
+</td></tr>
+<tr><td>
+	<label for="toc">Accept terms & Conditions:</label>
+</td><td>
+	<input type="checkbox" name="toc"
+			title="Alternative data" value="yes" />
+</td></tr>
+<tr><td>
+	<label for="sex">Sex:</label>
+</td><td>
+	<input type="radio" name="sex" value="Male" /> Male
+	<input type="radio" name="sex" value="Female" /> Female
+</td></tr>
+<tr><td>
+	<label for="job">Job:</label>
+</td><td>
+	<input type="radio" name="job" value="S" /> Student
+	<input type="radio" name="job" value="E" checked="True" /> Employed
+	<input type="radio" name="job" value="X" /> Jobless
+</td></tr>
+<tr><td>
+	<label for="dob">Date of Birth:</label>
+</td><td>
+	<input type="date" name="dob" />
+</td></tr>
+<tr><td>
+	<label for="dob_time">Time of Birth:</label>
+</td><td>
+
+	<input type="time" name="dob_time" />
+</td></tr>
+<tr><td>
+
+	<label for="favorite_color">Favorite Color:</label>
+</td><td>
+	
+	<input type="color" name="favorite_color" />
+</td></tr>
+<tr><td>
+
+	<label for="email">Email:</label>
+</td><td>
+
+	<input type="email" name="email" />
+</td></tr>
+<tr><td>
+
+	<label for="telephone">Tel:</label>
+</td><td>
+	<input type="tel" name="telephone" />
+</td></tr>
+<tr><td>
+
+	<label name="age">Age:</label>
+</td><td>
+	<input type="number" name="age" />
+</td></tr>
+<tr><td>
+
+	<label name="age_range">Age Range:</label>
+</td><td>
+	<input type="range" name="age_range" min=10 max=100 />
+</td></tr>
+<tr><td>
+
+	<label for="photo">Upload a photo:</label>
+</td><td>
+	<input type="file" name="photo">
+</td></tr>
+<tr><td valign="top">
+
+	<label for="summary">Your summary:</label>
+</td><td>
+	<textarea name="summary">Hello</textarea>
+</td></tr>
+<tr><td>
+
+	<label name="education">Education:</label>
+</td><td>
+	<select name="education">
+		<option disabled>--- No Education</option>
+		<option value="0">Illiterate</option>	
+		<option disabled>-- Low Education</option>
+		<option value="1">High School</option>
+		<option disabled>-- University Education</option>
+		<option value="2">College</option>
+		<option value="3">Bachelor</option>
+		<option value="4">Masters</option>
+		<option value="5">PhD</option>
+	</select>
+</td></tr>
+<tr><td valign="top">
+
+	<label for="favorites">Favorites:</label>
+</td><td>
+	<select name="favorites" multiple>
+		<option value="1">Skating</option>
+		<option value="2">Basketball</option>
+		<option value="3">Hockey</option>
+		<option value="4">Socker</option>
+		<option value="5">Baseball</option>
+	</select>
+</td></tr>
+<tr><td>
+&nbsp;
+</td><td>
+<input type="submit" value="Send" />
+</td></tr>
+
+<tr><td>
+&nbsp;
+</td><td>
+<input type="reset" value="Reset" />
+</td></tr>
+
+</table>
+
+</form>
+
+
+</body>
+</html>

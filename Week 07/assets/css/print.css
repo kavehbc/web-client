@@ -1,0 +1,9 @@
+.marquee {display: inline;}
+.box {font-family: Times;}
+.box-left {
+	display: none;
+	background-color: white;
+}
+.box-right {
+	background-color: white;
+}

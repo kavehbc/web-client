@@ -5,6 +5,10 @@
 ##### Header 4
 ###### Header 5
 
+## Execution
+In order to execute/run this repo, rename credentials.yaml.sample to credentials.yaml file and change the username and password.
+
+
 You can use HTML Tags too:
 <h1>Web Client</h1>
 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS</title>
+</head>
+<body>
+
+<img src="cat.jpg"
+		style="width: 100px; height:100px;
+		aspect-ratio: 1 / 1;    /* Enforces a perfect square */
+		object-fit: cover;      /* Prevents stretching/distortion */
+		border-radius: 50%; "
+ />
+<br />
+
+<style>
+.profile {
+	width: 100px;
+	height:100px;
+	aspect-ratio: 1 / 1;    /* Enforces a perfect square */
+	object-fit: cover;      /* Prevents stretching/distortion */
+	border-radius: 50%;
+	border-top-right-radius: 5%;
+	border: 1px Solid Black;
+	padding: 2px;
+	}
+</style>
+
+
+<img src="cat.jpg" class="profile" />
+<br />
+
+<h1>This is my header</h1>
+<p style="font-family:Arial;font-size:40pt;color:red;background-color:#eeeeee">
+Here is a <b>sample</b> <span style="font-weight:300;">sample</span>
+<span style="font-weight:700;">sample</span>
+<span style="font-weight:900;">sample</span>
+text.
+</p>
+
+<p style="text-decoration:overline line-through underline; text-decoration-color:red; text-decoration-style:wavy">
+This should be a strike-through text
+</p>
+
+<p style="text-decoration:overline line-through underline wavy red;">
+This should be a strike-through text
+</p>
+
+<p>
+<span style="text-decoration:overline wavy red;">
+<span style="text-decoration:underline dashed blue;">
+<span style="text-decoration:line-through dotted green;">
+This should be a strike-through text
+</span></span></span>
+</p>
+
+<style>
+/* tag only */
+p {
+	color: red;
+}
+
+/* class only */
+.regular-p {
+	font-family:Arial;
+	color:green;
+	}
+	
+/* tag + class */
+div.regular-p {
+	font-family:Arial;
+	color:gray;
+	}
+
+/* with ID only */
+#p1 {
+	font-family:Arial;
+	font-size:20pt;
+	}
+</style>
+
+
+<p class="regular-p" style="color: blue;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<p class="regular-p">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<div class="regular-p">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div id="p1">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+</body>
+</html>

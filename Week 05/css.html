@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS</title>
+</head>
+<body>
+
+<style>
+body {
+	width: 100%;
+}
+
+#main {
+	width: 50%;
+	margin: 0 auto; /* will make it center horizontally */
+	border: 0px Solid Red;
+}
+
+a.a1:link {
+	color: blue;
+	text-decoration: underline;
+}
+a.a1:hover {
+	color: red;
+	font-size: 20pt;
+	background: yellow;
+	text-decoration: none;
+}
+a.a1:active {
+	color: yellow;
+	text-decoration: underline;
+}
+a.a1:visited {
+	color: gray;
+	text-decoration: underline;
+}
+
+input {
+	color:red;
+	border: none;
+}
+
+input:disabled {
+	color: gray;
+	background: yellow;
+}
+
+input:focus {
+	background: green;
+	border:1px dotted black;
+    outline: none;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	border: 1px Solid black;
+	background: red;
+	animation: RedBlue 2s infinite;
+}
+
+@keyframes RedBlue {
+	from {					/* 0% */
+		background: red;
+		transform: scale(1);
+	}
+	50% {
+		background: blue;
+		transform: scale(1.3);
+	}
+	to {					/* 100% */
+		background: red;
+		transform: scale(1);
+	}
+}
+
+.circle-fixed, .circle-pulse {
+	width: 100px;
+	height: 100px;
+	background: green;
+	border-radius: 50%;
+}
+
+.circle-pulse {
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	from {
+		transform: scale(1);
+		opacity: 1.0;
+	}
+	to {
+		transform: scale(2.5);
+		opacity: 0.0;
+	}
+}
+</style>
+
+<div id="main">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<br /><br />
+
+<a class="a1" href="http://www.qweqweqew.com">This is the link to the page</a><br /><br />
+
+<input type="text" value="sample text"/>
+<input type="text" value="sample text" disabled/>
+
+<br /><br />
+
+<div class="box">&nbsp;</div>
+
+<br /><br /><br /><br /><br />
+
+<div class="circle-fixed">
+	<div class="circle-pulse"></div>
+</div>
+
+<br /><br /><br /><br /><br />
+
+
+<style>
+.mywebsite {
+	border: 1px Solid gray;
+	padding: 50px;
+	border-radius: 40%;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	font-family: Arial;
+	background-image: linear-gradient(80deg, #0000FF, #55aaFF, #aa55FF);
+	box-shadow: 30px 30px 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+</style>
+
+<a class="mywebsite" href="http://www.kaveh.ai">My Personal Website</a>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+</div>
+
+</body>
+</html>

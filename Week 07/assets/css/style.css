@@ -1,0 +1,33 @@
+.responsive-container {
+	display: flex;
+	flex-wrap: wrap; /* allows items to drop to the next line when screen shinks */
+	gap: 20px;
+	width: 100%;
+	box-sizing: boder-box;
+}
+.box {
+	/* grow | shrink | basis */
+	/* 1 = allow to grow; 1 = allow to shrink; 450px = ideal width target */
+	flex: 1 1 450px;
+	
+	/* optional settings */
+	border: 1px Solid gray;
+	border-radius: 5px;
+}
+.box-left {
+	background-color: #e3f2fd;
+	border: 1px Solid blue;
+}
+.box-right {
+	background-color: #fff3e0;
+}
+
+/* When Screen side gets smaller than 700px */
+@media (max-width: 700px){
+	.box-left {
+		background-color: red;
+	}
+	.box-right {
+		background-color: green;
+	}
+}

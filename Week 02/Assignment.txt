@@ -1,0 +1,2 @@
+Week 3:
+Design a simple website using simple HTML tags, tables, images and links

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables - DIV FLEX</title>
+</head>
+<body>
+
+<style>
+.flex-table {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.flex-row {
+	display: flex;
+	width:100%;
+}
+.flex-row.header {
+	font-weight: bold;
+	background-color: #eeeeee;
+}
+.flex-cell {
+	flex: 1;
+	padding: 10px;
+	border: 1px Solid Black;
+	text-align: left;
+}
+</style>
+
+<div class="flex-table">
+	<div class="flex-row header">
+		<div class="flex-cell">
+		Name
+		</div>
+		<div class="flex-cell">
+		Role
+		</div>
+		<div class="flex-cell">
+		Location
+		</div>
+	</div>
+	<div class="flex-row">
+		<div class="flex-cell">
+		Jane Doe
+		</div>
+		<div class="flex-cell">
+		Programmer
+		</div>
+		<div class="flex-cell">
+		Montreal
+		</div>
+	</div>
+	<div class="flex-row">
+		<div class="flex-cell">
+		John Smith
+		</div>
+		<div class="flex-cell">
+		Designer
+		</div>
+		<div class="flex-cell">
+		Toronto
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
