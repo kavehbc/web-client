@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Timer</title>
+</head>
+<body>
+
+    <style>
+    body {
+        margin: 0;
+        background-color: #000;
+        color: #d1cfcf;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .clock {
+        text-align: center;
+    }
+
+    .timerOutput {
+        font-size: 10em;
+    }
+
+    .buttons {
+        font-size: 2em;
+    }
+
+    button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+</style>
+    <div class="clock">
+        <div class="timerOutput" id="timerOutput">00:00:00.00</div>
+        <div class="buttons" id="date">
+            <button id="startButton">Start</button>
+            <button id="stopButton" disabled>Stop</button>
+            <button id="resetButton" disabled>Reset</button>
+        </div>
+    </div>
+    
+    <script>
+        let timer;
+        let milliseconds = 0;
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        const startButton = document.getElementById("startButton");
+        const stopButton = document.getElementById("stopButton");
+        const resetButton = document.getElementById("resetButton");
+
+        startButton.addEventListener("click", startTimer);
+        stopButton.addEventListener("click", stopTimer);
+        resetButton.addEventListener("click", resetTimer);
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = null;
+            milliseconds = 0;
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            document.getElementById("timerOutput").textContent = "00:00:00.00";
+            startButton.textContent = "Start";
+            startButton.disabled = false;
+            stopButton.disabled = true;
+            resetButton.disabled = true;
+        }
+
+        function updateTimer() {
+            milliseconds += 100;
+
+            if (milliseconds >= 1000) {
+                milliseconds = 0;
+                seconds++;
+            }
+
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+            }
+
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
+            }
+
+            const formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}.${pad(milliseconds/100)}`;
+            document.getElementById("timerOutput").textContent = formattedTime;
+        }
+
+        function startTimer() {
+            if (!timer) {
+                timer = setInterval(updateTimer, 100);
+                startButton.disabled = true;
+                stopButton.disabled = false;
+                resetButton.disabled = false;
+            }
+        }
+
+        function pad(value) {
+            return value.toString().padStart(2, '0');
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+            timer = null;
+            startButton.textContent = "Resume";
+            startButton.disabled = false;
+            stopButton.disabled = true;
+            resetButton.disabled = false;
+        }
+    </script>
+</body>
+</html>
