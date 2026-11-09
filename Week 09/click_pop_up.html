@@ -119,6 +119,11 @@
 
         <script>
         document.getElementById('showPopup').addEventListener('click', function() {
+            var noticeText = document.getElementById('noticeText').value;
+
+            // if id is not available, use querySelector to find the element with class 'popup-body'
+            document.querySelector('.popup-body').textContent = noticeText;
+
             document.getElementById('myPopup').style.display = 'block';
         });
 
