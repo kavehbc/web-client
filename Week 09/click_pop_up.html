@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Example</title>
+</head>
+<body>
+    <h1>Welcome to JavaScript</h1>
+    <p>This is a simple JavaScript example.</p>
+    <p>A pop-up message in HTML and CSS</p>
+
+    <input type="text" id="noticeText" />
+    <button id="showPopup">Click Me!</button>
+
+
+    <!-- POP UP MESSAGE STARTS HERE -->
+    <div class="popup" id="myPopup" role="dialog" aria-labelledby="popupTitle">
+        <div class="popup-header">
+            <span class="popup-title" id="popupTitle">Notice</span>
+            <button type="button" class="popup-close" aria-label="Close" id="popupX">&times;</button>
+        </div>
+        <div class="popup-body">A Simple Pop-up!</div>
+        <div class="popup-footer">
+            <button type="button" class="popup-ok" id="popupOk">OK</button>
+        </div>
+    </div>
+    <!-- POP UP MESSAGE ENDS HERE -->
+
+    <style>
+        /* Visible by default, centered at the top of the page */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 360px;
+            max-width: calc(100% - 40px);
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-animation: fadeIn 0.5s;
+            animation: fadeIn 0.5s;
+        }
+
+        .popup .popup-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0d6efd;
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 7px 7px 0 0;
+        }
+
+        .popup .popup-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .popup .popup-close {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0 4px;
+        }
+
+        .popup .popup-close:hover {
+            color: #ffd7d7;
+        }
+
+        .popup .popup-body {
+            padding: 18px 14px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .popup .popup-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 14px;
+            border-top: 1px solid #e5e5e5;
+            background-color: #f8f9fa;
+            border-radius: 0 0 7px 7px;
+        }
+
+        .popup .popup-ok {
+            background-color: #0d6efd;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 7px 22px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .popup .popup-ok:hover {
+            background-color: #0b5ed7;
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+
+        <script>
+        document.getElementById('showPopup').addEventListener('click', function() {
+            document.getElementById('myPopup').style.display = 'block';
+        });
+
+        document.getElementById('popupOk').addEventListener('click', hidePopup);
+
+        document.getElementById('popupX').addEventListener('click', hidePopup);
+
+        function hidePopup() {
+            document.getElementById('myPopup').style.display = 'none';
+        }
+
+    </script>
+
+</html>
