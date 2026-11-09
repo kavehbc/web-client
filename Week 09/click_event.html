@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Example</title>
+</head>
+<body>
+
+
+    <h1>Welcome to JavaScript</h1>
+    <p>This is a simple JavaScript example.</p>
+
+    <button id="myButton">Click Me!</button>
+    <p id="output" style="color:red;"></p>
+
+    
+    <script>
+        document.getElementById("myButton").addEventListener("click", ButtonClicked);
+        // alert("Hello, World!");
+
+        // "load" fires after all resources are loaded; alert() blocks rendering,
+        // so defer it until after the browser has painted the page
+        window.addEventListener("load", function() {
+            requestAnimationFrame(() => setTimeout(() => alert("Page has loaded!"), 0));
+         }
+        );
+
+        
+        function ButtonClicked() {
+            obj = document.getElementById("output");
+            obj.textContent = "<b>Button was clicked!</b>";
+            //obj.innerHTML = "<b>Button was clicked!</b>";
+            //obj.outerHTML = "<b>Button was clicked!</b>";
+            obj.style.color = "blue";
+        }
+    </script>
+
+</body>
+</html>

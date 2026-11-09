@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Example</title>
+</head>
+<body>
+    <script>
+        function ButtonClicked() {
+            obj = document.getElementById("output");
+            obj.textContent = "<b>Button was clicked!</b>";
+            //obj.innerHTML = "<b>Button was clicked!</b>";
+            //obj.outerHTML = "<b>Button was clicked!</b>";
+            obj.style.color = "blue";
+        }
+
+    </script>
+
+    <h1>Welcome to JavaScript</h1>
+    <p>This is a simple JavaScript example.</p>
+
+    <button id="myButton" onclick="ButtonClicked()">Click Me!</button>
+    <p id="output" style="color:red;"></p>
+
+    
+
+</body>
+</html>
