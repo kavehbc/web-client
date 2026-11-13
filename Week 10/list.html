@@ -47,11 +47,9 @@
                 
                 const liCheck = document.createElement("input");
                 liCheck.type = "checkbox";
-                li.appendChild(liCheck); // append the checkbox to the list item
 
                 const liText = document.createElement("span");
                 liText.textContent = itemText; // set the text content of the span to the input value
-                li.appendChild(liText); // append the span to the list item
 
                 const deleteButton = document.createElement("button");
                 deleteButton.textContent = "Delete"; // set the text content of the delete button
@@ -71,6 +69,8 @@
                     }
                 });
 
+                li.appendChild(liCheck); // append the checkbox to the list item
+                li.appendChild(liText); // append the span to the list item
                 li.appendChild(deleteButton); // append the delete button to the list item
                 li.appendChild(toggleButton); // append the toggle button to the list item
                 itemList.appendChild(li); // place new list item in the unordered list
