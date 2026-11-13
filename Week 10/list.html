@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript List Update</title>
+</head>
+<body>
+
+    <div>
+        Add Items to the List:<br />
+        <input type="text" id="itemInput" placeholder="Enter an item">
+        <br />
+        <button id="addButton">Add Item</button>
+    </div>        
+    List of Items:
+    <br/><br/>
+
+    <ul id="itemList"></ul>
+
+    <script>
+        const addButton = document.getElementById("addButton");
+        const itemInput = document.getElementById("itemInput");
+        const itemList = document.getElementById("itemList");
+
+        addButton.addEventListener("click", addItem);
+
+        function addItem() {
+            const itemText = itemInput.value.trim();
+            if (itemText !== "") {
+                const listItem = document.createElement("li"); // create a new list item element
+                listItem.textContent = itemText; // set the text content of the list item to the input value
+                itemList.appendChild(listItem); // place new list item in the unordered list
+                itemInput.value = ""; // clear the input field after adding the item
+                itemInput.focus(); // set focus back to the input field for convenience
+            }else{
+                alert("Please enter an item before adding to the list.");
+            }
+        }
+    </script>
+
+</body>
+</html>
