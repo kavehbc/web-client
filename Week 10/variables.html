@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Varibales</title>
+</head>
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+        }
+    </style>
+Here is the output:<br />
+<div id="output"></div>
+
+<script>
+let outputDiv = document.getElementById("output");
+let a = 5;
+// outputDiv.textContent = a;
+
+function f(){
+    let b = 10;
+//    outputDiv.textContent = a;
+    g(b, 20, 30);
+}
+
+function g(x, y , z){
+    let c = 15;
+    outputDiv.textContent = x;
+    outputDiv.textContent += " " + y;
+    outputDiv.textContent += " " + z;
+}
+
+f();
+// g();
+z = f;
+z();
+
+//outputDiv.textContent = a;
+
+</script>
+
+</body>
+</html>

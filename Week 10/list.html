@@ -39,7 +39,7 @@
 
         addButton.addEventListener("click", addItem);
 
-        function addItem() {
+        function addItem() {            
             const itemText = itemInput.value.trim();
             if (itemText !== "") {
                 const li = document.createElement("li"); // create a new list item element
@@ -64,7 +64,7 @@
                 toggleButton.textContent = "Done"; // set the text content of the toggle button
                 toggleButton.addEventListener("click", function() {
                     toggleItemStatus(li, toggleButton, liCheck); // call the toggleItemStatus function when the toggle button is clicked
-                });
+                }); // bind the toggleItemStatus function to the toggle button click event{
 
                 li.appendChild(liCheck); // append the checkbox to the list item
                 li.appendChild(liText); // append the span to the list item
