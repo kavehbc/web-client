@@ -27,9 +27,15 @@
         function addItem() {
             const itemText = itemInput.value.trim();
             if (itemText !== "") {
-                const listItem = document.createElement("li"); // create a new list item element
-                listItem.textContent = itemText; // set the text content of the list item to the input value
-                itemList.appendChild(listItem); // place new list item in the unordered list
+                const li = document.createElement("li"); // create a new list item element
+                li.textContent = itemText; // set the text content of the list item to the input value
+                
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete"; // set the text content of the delete button
+
+                li.appendChild(deleteButton); // append the delete button to the list item
+                
+                itemList.appendChild(li); // place new list item in the unordered list
                 itemInput.value = ""; // clear the input field after adding the item
                 itemInput.focus(); // set focus back to the input field for convenience
             }else{
