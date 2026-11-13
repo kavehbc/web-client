@@ -6,6 +6,17 @@
 </head>
 <body>
 
+    <style>
+        .done {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .undone {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    
     <div>
         Add Items to the List:<br />
         <input type="text" id="itemInput" placeholder="Enter an item">
@@ -28,13 +39,29 @@
             const itemText = itemInput.value.trim();
             if (itemText !== "") {
                 const li = document.createElement("li"); // create a new list item element
+                li.className = "undone"; // set the class of the list item to "undone"
                 li.textContent = itemText; // set the text content of the list item to the input value
                 
                 const deleteButton = document.createElement("button");
                 deleteButton.textContent = "Delete"; // set the text content of the delete button
+                deleteButton.addEventListener("click", function() {
+                    itemList.removeChild(li); // remove the list item when the delete button is clicked
+                });
+
+                const toggleButton = document.createElement("button");
+                toggleButton.textContent = "Done"; // set the text content of the toggle button
+                toggleButton.addEventListener("click", function() {
+                    if (li.className === "undone") {
+                        li.className = "done"; // change the class of the list item to "done"
+                        toggleButton.textContent = "Undone";
+                    } else {
+                        li.className = "undone"; // change the class of the list item to "undone"
+                        toggleButton.textContent = "Done";
+                    }
+                });
 
                 li.appendChild(deleteButton); // append the delete button to the list item
-                
+                li.appendChild(toggleButton); // append the toggle button to the list item
                 itemList.appendChild(li); // place new list item in the unordered list
                 itemInput.value = ""; // clear the input field after adding the item
                 itemInput.focus(); // set focus back to the input field for convenience
