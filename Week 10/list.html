@@ -15,6 +15,10 @@
             text-decoration: none;
             color: black;
         }
+
+        li > * { /* targets all direct children of li elements */
+            margin-right: 10px;
+        }
     </style>
     
     <div>
@@ -40,8 +44,15 @@
             if (itemText !== "") {
                 const li = document.createElement("li"); // create a new list item element
                 li.className = "undone"; // set the class of the list item to "undone"
-                li.textContent = itemText; // set the text content of the list item to the input value
                 
+                const liCheck = document.createElement("input");
+                liCheck.type = "checkbox";
+                li.appendChild(liCheck); // append the checkbox to the list item
+
+                const liText = document.createElement("span");
+                liText.textContent = itemText; // set the text content of the span to the input value
+                li.appendChild(liText); // append the span to the list item
+
                 const deleteButton = document.createElement("button");
                 deleteButton.textContent = "Delete"; // set the text content of the delete button
                 deleteButton.addEventListener("click", function() {
