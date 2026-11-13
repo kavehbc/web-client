@@ -47,6 +47,9 @@
                 
                 const liCheck = document.createElement("input");
                 liCheck.type = "checkbox";
+                liCheck.addEventListener("change", function() {
+                    toggleItemStatus(li, toggleButton, liCheck); // call the toggleItemStatus function when the toggle button is clicked
+                });
 
                 const liText = document.createElement("span");
                 liText.textContent = itemText; // set the text content of the span to the input value
@@ -60,13 +63,7 @@
                 const toggleButton = document.createElement("button");
                 toggleButton.textContent = "Done"; // set the text content of the toggle button
                 toggleButton.addEventListener("click", function() {
-                    if (li.className === "undone") {
-                        li.className = "done"; // change the class of the list item to "done"
-                        toggleButton.textContent = "Undone";
-                    } else {
-                        li.className = "undone"; // change the class of the list item to "undone"
-                        toggleButton.textContent = "Done";
-                    }
+                    toggleItemStatus(li, toggleButton, liCheck); // call the toggleItemStatus function when the toggle button is clicked
                 });
 
                 li.appendChild(liCheck); // append the checkbox to the list item
@@ -78,6 +75,18 @@
                 itemInput.focus(); // set focus back to the input field for convenience
             }else{
                 alert("Please enter an item before adding to the list.");
+            }
+        }
+
+        function toggleItemStatus(li, toggleButton, liCheck) {
+            if (li.className === "undone") {
+                li.className = "done"; // change the class of the list item to "done"
+                toggleButton.textContent = "Undone"; // change the text of the toggle button to "Undone"
+                liCheck.checked = true; // check the checkbox
+            } else {
+                li.className = "undone"; // change the class of the list item to "undone"
+                toggleButton.textContent = "Done"; // change the text of the toggle button to "Done"
+                liCheck.checked = false; // uncheck the checkbox
             }
         }
     </script>
